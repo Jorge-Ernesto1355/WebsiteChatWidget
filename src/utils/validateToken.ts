@@ -26,12 +26,12 @@ export const validateReplicateToken = (
     return result;
   }
 
-  // Check token length (r8_ + 32 characters = 35 total)
-  if (token.length !== 40) {
-    result.error = "Replicate token must be exactly 35 characters long";
+  // Validate Replicate token format
+  if (!token.startsWith("r8_") /* || token.length < 10 */) {
+    result.error =
+      "Replicate token must begin with 'r8_' and be a valid API token";
     return result;
   }
-
   // Check if the part after 'r8_' contains only alphanumeric characters
   const tokenBody = token.slice(3); // Remove 'r8_' prefix
   const alphanumericRegex = /^[a-zA-Z0-9]+$/;
@@ -68,7 +68,7 @@ export const validateHuggingFaceToken = (
 
   // Check token length (hf_ + 31 characters = 34 total)
   if (token.length !== 37) {
-    result.error = "Hugging Face token must be exactly 34 characters long";
+    result.error = "Hugging Face token must be exactly 37 characters long";
     return result;
   }
 
