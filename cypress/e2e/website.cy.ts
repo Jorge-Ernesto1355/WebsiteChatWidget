@@ -127,7 +127,7 @@ describe("Website", () => {
       });
   });
 
-  it.only("should be able to copy the code from code section", () => {
+  it("should be able to copy the code from code section", () => {
     const expectedCode = `<ChatWidget
       title="AI assistant"
       direction="left" 

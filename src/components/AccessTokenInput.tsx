@@ -11,7 +11,7 @@ const AccessTokenInput = () => {
 
   const [pasted, setPasted] = useState<boolean>(false);
 
-  const handlePasteClikc = async () => {
+  const handlePasteClick = async () => {
     try {
       const clipBoard = await navigator.clipboard.readText();
 
@@ -38,18 +38,19 @@ const AccessTokenInput = () => {
       store.setAccessToken(e.target.value);
     } else {
       setValidationTokenError(true);
-      store.setAccessToken(e.target.value);
+      store.setAccessToken("");
     }
   };
 
   const Suffix = (
     <button
+      type="button"
+      aria-label="Paste token from clipboard"
       onClick={(e) => {
         e.preventDefault();
-        handlePasteClikc();
+        handlePasteClick();
       }}
-      className={`flex items-center gap  transition-all duration-300 
-        `}
+      className={`flex items-center gap-1 transition-all duration-300`}
     >
       {pasted ? (
         <Check className="w-4 h-4 text-green-500" />
@@ -65,17 +66,17 @@ const AccessTokenInput = () => {
       </span>
     </button>
   );
-
   return (
     <div className="w-full max-w-md space-y-4 ">
       <label className="block  font-medium text-gray-700 mb-2">
         Access Token
       </label>
       <Input
+        data-cy="access-token-input"
         placeholder={
           store.provider === "huggingface"
-            ? "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"
-            : "r8_0FYXMxGWyIPDaaxtjAYAqpYX7MvC6S62o2zMT"
+            ? "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+            : "r8_xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
         }
         disabled={!store.provider}
         status={validationTokenError ? "error" : ""}
