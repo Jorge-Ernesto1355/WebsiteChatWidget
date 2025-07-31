@@ -37,8 +37,7 @@ const Footer = () => {
           target="_blank"
           rel="noreferrer"
         >
-          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 Made by{" "}
-          <span className="text-blue-400 underline">Jorge Ernesto</span>
+          Made by <span className="text-blue-400 underline">Jorge Ernesto</span>
         </a>
         <span>
           © 2024 ChatCraft. All rights reserved. Built with ❤️ for developers.
