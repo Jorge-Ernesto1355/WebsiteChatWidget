@@ -9,8 +9,14 @@ import { Settings } from "iconoir-react";
 const FormSection = () => {
   const store = useStore();
 
+  const isMobile = window.innerWidth < 768;
+  console.log(isMobile);
   return (
-    <div className="w-full h-full ml-5 border border-gray-200 rounded-lg shadow-lg p-1">
+    <div
+      className={`w-full h-full border border-gray-200 rounded-lg shadow-lg p-1 ${
+        isMobile ? "mt-10 " : "ml-5"
+      }`}
+    >
       <div className="flex items-center space-x-3 mb-6 m-5">
         <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
           <Settings className="w-4 h-4 text-white" />
