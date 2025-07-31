@@ -15,10 +15,10 @@ function App() {
       <Badge />
       <HeroSection />
       <Row className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center mb-20">
-        <Col span={13}>
+        <Col xs={24} md={13}>
           <CodeSection />
         </Col>
-        <Col span={11}>
+        <Col xs={24} md={11}>
           <FormSection />
         </Col>
       </Row>
