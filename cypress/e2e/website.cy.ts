@@ -83,11 +83,7 @@ describe("Website", () => {
       .contains("Huggingface");
     cy.get("[data-cy='access-token-input']")
       .should("exist")
-      .should(
-        "have.attr",
-        "placeholder",
-        "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"
-      );
+      .should("have.attr", "placeholder", "hf_xxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 
     cy.get("[data-cy='model-input']")
       .should("exist")
