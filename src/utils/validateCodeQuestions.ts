@@ -1,10 +1,12 @@
 interface ValidateQuestionsCodeReturnType {
   isValid: boolean;
-  error?: "string";
-  message?: "string";
+  error?: string;
+  message?: string;
 }
 
-export function ValidateQuestionsCode(texto: string) {
+export function ValidateQuestionsCode(
+  texto: string
+): ValidateQuestionsCodeReturnType {
   if (!texto) {
     return { isValid: false, error: "The content is empty." };
   }
@@ -46,7 +48,7 @@ export function ValidateQuestionsCode(texto: string) {
       }
     }
 
-    return { isValid: true, mensaje: "the format is valid." };
+    return { isValid: true, message: "the format is valid." };
   } catch (e) {
     return { isValid: false, error: "the format is not valid." };
   }
