@@ -4,6 +4,8 @@ import GmailIcon from "../icons/GmailIcon";
 import { Divider } from "antd";
 
 const Footer = () => {
+  const isMobile = window.innerWidth < 768;
+
   return (
     <div className="w-full bg-white flex flex-col justify-center items-center py-5 space-y-2">
       <div className="flex">
@@ -14,7 +16,7 @@ const Footer = () => {
           React Chat AI Widget
         </h3>
       </div>
-      <p className="font-medium text-gray-700">
+      <p className="font-medium text-gray-700 text-center">
         Build and deploy AI chatbots with ease. Powered by the latest AI models
         from Hugging Face and Replicate
       </p>
@@ -31,7 +33,11 @@ const Footer = () => {
         </ul>
       </div>
       <Divider style={{ marginTop: "10px" }} />
-      <p className="text-gray-600 text-center flex space-x-2">
+      <p
+        className={`text-gray-600 text-center flex space-x-2 ${
+          isMobile ? "flex-col " : ""
+        }`}
+      >
         <a
           href="https://jorge-ernesto-portfolio.vercel.app"
           target="_blank"
