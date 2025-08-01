@@ -10,7 +10,7 @@ const FormSection = () => {
   const store = useStore();
 
   const isMobile = window.innerWidth < 768;
-  console.log(isMobile);
+  
   return (
     <div
       className={`w-full h-full border border-gray-200 rounded-lg shadow-lg p-1 ${
