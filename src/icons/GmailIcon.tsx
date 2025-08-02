@@ -1,6 +1,4 @@
-import React from "react";
-
-const GmailIcon = (props) => (
+const GmailIcon = (props: any) => (
   <svg
     width="24px"
     height="24px"

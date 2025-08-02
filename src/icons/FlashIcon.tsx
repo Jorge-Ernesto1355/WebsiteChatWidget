@@ -1,5 +1,3 @@
-import React from "react";
-
 const FlashIcon = (props: any) => (
   <svg
     width="24px"
