@@ -141,6 +141,7 @@ const DataInput = () => {
           <code>confidence</code> are optionals.
         </p>
         <button
+          role="send-code"
           type="button"
           className="w-6/7  h-6 bg-blue-500 flex justify-center items-center font-medium   text-white rounded-md  hover:bg-blue-700 mt-3 mb-2"
           onClick={handleClickQuestionsCode}
