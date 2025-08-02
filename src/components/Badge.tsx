@@ -1,5 +1,4 @@
 import { Sparks } from "iconoir-react";
-import React from "react";
 
 const Badge = () => {
   return (
