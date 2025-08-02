@@ -49,6 +49,7 @@ const ConfigurationInput = () => {
             </div>
             <div data-cy={`slider-${key}`} className="w-full max-w-md">
               <Slider
+                data-cy={`slider-${key}`}
                 aria-label={`slider-${key}`}
                 onChange={(val) => {
                   store.setConfig({ ...store.config, [key]: val });
