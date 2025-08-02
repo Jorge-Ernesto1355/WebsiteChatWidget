@@ -37,8 +37,8 @@ const AccessTokenInput = () => {
       setValidationTokenError(false);
       store.setAccessToken(e.target.value);
     } else {
+      store.setAccessToken(e.target.value);
       setValidationTokenError(true);
-      store.setAccessToken("");
     }
   };
 
@@ -86,7 +86,7 @@ const AccessTokenInput = () => {
         value={store.accessToken}
       />
       {validationTokenError ? (
-        <p className="text-sm text-red-500 mt-1 ">
+        <p className="text-sm text-red-500 mt-1" aria-label="token-error">
           The token is invalid or does not match with the provider
           <span className="ml-1">{store.provider}</span>
         </p>
