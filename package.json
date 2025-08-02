@@ -15,7 +15,7 @@
     "antd": "^5.26.6",
     "iconoir-react": "^7.11.0",
     "react": "^18.2.0",
-    "react-chat-ai-widget": "^1.6.11",
+    "react-chat-ai-widget": "^1.6.12",
     "react-dom": "^18.2.0",
     "react-syntax-highlighter": "^15.6.1",
     "tailwindcss": "^4.1.11",
