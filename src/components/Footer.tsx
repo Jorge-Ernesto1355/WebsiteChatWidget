@@ -1,5 +1,5 @@
 import { Github, Npm, Sparks } from "iconoir-react";
-import React from "react";
+
 import GmailIcon from "../icons/GmailIcon";
 import { Divider } from "antd";
 
